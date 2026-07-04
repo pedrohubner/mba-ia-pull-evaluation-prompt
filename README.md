@@ -85,10 +85,16 @@ Provider usado na avaliação: **OpenAI** — resposta `gpt-4o-mini`, avaliaçã
 `gpt-4o`. Resultado **APROVADO** (todas as 5 métricas ≥ 0.8), confirmado em 2 execuções.
 
 - **Prompt público v2:** https://smith.langchain.com/hub/pedrohubner/bug_to_user_story_v2
-- **Projeto de avaliação:** `prompt-optimization-challenge` no dashboard do LangSmith
-  (dataset `prompt-optimization-challenge-eval`, 15 exemplos).
-- **Screenshots:** adicionar em `screenshots/` e referenciar aqui
-  _(ex.: `![aprovado](screenshots/eval-aprovado.png)`)_.
+- **Dataset de avaliação:** `prompt-optimization-challenge-eval` (15 exemplos) — visível
+  no dashboard em **Datasets & Experiments**.
+- **Projeto de tracing:** `prompt-optimization-challenge` (200 runs: geração das user
+  stories + avaliadores F1/Clarity/Precision) — em **Tracing**.
+- **Tracing público de 3 exemplos** (abrem sem login):
+  - Botão adicionar ao carrinho: https://smith.langchain.com/public/b30de827-c4b6-4641-9dec-42fee6f7dc97/r
+  - Validação de e-mail: https://smith.langchain.com/public/9cd5de3e-0820-462c-ab0f-3705e2254574/r
+  - Layout iOS em paisagem: https://smith.langchain.com/public/e13417ca-beec-4fc0-931a-c2eb5061fde7/r
+- **Screenshots (opcional):** se quiser anexar imagens, salve em `screenshots/` e
+  referencie aqui _(ex.: `![aprovado](screenshots/eval-aprovado.png)`)_.
 
 ### Tabela comparativa v1 (ruim) × v2 (otimizado)
 
@@ -118,10 +124,11 @@ Resumo do que cada iteração corrigiu, guiado pelo *reasoning* do juiz F1 no tr
 8. Meta de performance = tempo rápido (nunca repetir o tempo ruim) + proibição de
    nomear atores/quantidades do passo-a-passo nos critérios → **APROVADO**.
 
-**Evidências no LangSmith (conferir no dashboard):**
-- Dataset de avaliação com 15 exemplos (`prompt-optimization-challenge-eval`).
-- Execuções do prompt v2 com notas ≥ 0.8.
-- Tracing detalhado dos exemplos (raciocínio do LLM e dos avaliadores).
+**Evidências no LangSmith:**
+- ✅ Dataset de avaliação com 15 exemplos (`prompt-optimization-challenge-eval`).
+- ✅ Execuções do prompt v2 com notas ≥ 0.8 (saída do `src/evaluate.py`, acima).
+- ✅ Tracing detalhado com o raciocínio do LLM e dos avaliadores — 3 traces públicos
+  linkados acima (input do bug → user story gerada → score + reasoning do juiz).
 
 ---
 
