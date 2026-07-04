@@ -1,15 +1,3 @@
-# =============================================================================
-# Prompt OTIMIZADO (v2) — Bug Report -> User Story
-# =============================================================================
-# Técnicas de Prompt Engineering aplicadas:
-#   1. Role Prompting     — persona de Product Manager ágil experiente
-#   2. Few-shot Learning  — exemplos de entrada/saída no estilo esperado
-#   3. Chain of Thought   — raciocínio passo a passo ANTES de escrever a saída
-#
-# A variável {bug_report} fica na mensagem do usuário (user_prompt), mantendo
-# o system_prompt como instrução pura (System vs User Prompt).
-# =============================================================================
-
 bug_to_user_story_v2:
   description: >-
     Converte relatos de bugs em User Stories ágeis, claras e testáveis,
@@ -292,9 +280,6 @@ bug_to_user_story_v2:
 
     Gere a User Story seguindo estritamente o formato e as regras definidas.
 
-  # ---------------------------------------------------------------------------
-  # Metadados
-  # ---------------------------------------------------------------------------
   version: "v2"
   created_at: "2026-07-04"
   tags:
@@ -303,7 +288,6 @@ bug_to_user_story_v2:
     - "product-management"
     - "optimized"
 
-  # Técnicas de Prompt Engineering aplicadas (>= 2, validado nos testes)
   techniques_applied:
     - "Role Prompting"
     - "Few-shot Learning"
